@@ -1,0 +1,19 @@
+extends nav.pug
+
+block content
+    link(rel='stylesheet' href='/stylesheets/single-game.css')
+    div#game-section
+        div#game-details
+            img(src=game.image)
+            div#game-description
+                h1#title= game.name
+                p#description-p= game.description
+        div#game-options
+            h2 developed by:
+            h1= developer.username
+            img(src=developer.profile)
+            h2 overall rating:
+            h1= game.overallRating
+            if user
+                h2 have you played this game?
+                h2 add to watchlist!

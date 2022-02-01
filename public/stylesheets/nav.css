@@ -1,0 +1,40 @@
+body {
+    background-color: gray;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr
+}
+
+#left-nav {
+    border: solid 1px yellow;
+    grid-column: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#mid-nav {
+    border: solid 1px blue;
+    grid-column: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right-nav {
+    border: solid 1px red;
+    grid-column: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

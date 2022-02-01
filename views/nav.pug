@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        link(rel='stylesheet' href='/stylesheets/nav.css')
+        nav
+            div#left-nav
+                a(href='/games') all games
+                form(action='/games/search' method='post')
+                    input(type='text' name='name' placeholder='browse')
+                    button(type='submit') submit
+            div#mid-nav
+                if user
+                    p= `welcome ${user}!`
+                if !user
+                    p respawn
+            div#right-nav
+                if user
+                    p add a game
+                    p logout
+                if !user
+                    p login
+                    p signup
+    body
+        block content

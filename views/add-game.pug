@@ -1,0 +1,16 @@
+extends nav.pug
+
+block content
+    link(rel='stylesheet' href='/stylesheets/add-game.css')
+    div#add-game-div
+        h1 Add your game!
+        if errors
+            div#error-div
+                for error in errors
+                    p= error
+        form#add-game-form(action='/games/add' method='post')
+            input.add-game-form(type='hidden' name='_csrf', value=csrfToken)
+            input.add-game-form(type='text' name='name' placeholder='name' value=name)
+            textarea.add-game-form(name='description' placeholder='tell us about your game')=description
+            input.add-game-form(type='text' name='image' placeholder='have an image?' value=image)
+            button#submit-game-button(type='submit') submit

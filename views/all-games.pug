@@ -1,0 +1,11 @@
+extends nav.pug
+
+block content
+    link(rel='stylesheet' href='/stylesheets/all-games.css')
+    h1 ALL GAMES
+    each games, key in gamesObj
+        div.game-div
+            h2= key
+            div.img-div
+                for game in games
+                    img(src=game.image)

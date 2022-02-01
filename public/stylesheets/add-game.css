@@ -1,0 +1,35 @@
+#add-game-div {
+    border: 1px solid black;
+    width: 600px;
+    height: 500px;
+
+    margin: 200px auto;
+    text-align: center;
+}
+
+#add-game-form {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.add-game-form {
+    margin: 10px auto;
+    width: 50%;
+    height: 40px;
+}
+
+#submit-game-button {
+    margin: 10px auto;
+    width: 20%;
+    height: 40px;
+}
+
+#error-div {
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: salmon;
+    width: 40%;
+
+    margin: auto;
+}
