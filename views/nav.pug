@@ -18,7 +18,9 @@ html
                     p add a game
                     p logout
                 if !user
-                    p login
-                    p signup
+                    a(href='/users/login') login
+                    a(href='/users/signup') signup
+                    a(href='/users/demo') demo
+                    a(href='/users/logout') logout
     body
         block content

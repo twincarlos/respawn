@@ -6,6 +6,7 @@ const { csrf, csrfProtection, cookieParser } = require('./utils');
 
 const indexRouter = require('./routes/index');
 const gamesRouter = require('./routes/games');
+const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(csrf({ cookie: true }));
 
 app.use('/', indexRouter);
 app.use('/games', gamesRouter);
+app.use('/users', usersRouter);
 
 // Catch unhandled requests and forward to error handler.
 app.use((req, res, next) => {

@@ -1,0 +1,14 @@
+extends nav.pug
+
+block content
+    div
+        h1 Login
+        if errors
+            div
+                for error in errors
+                    p= error
+        form(action='/users/login' method='post')
+            input(type='hidden' name='_csrf', value=csrfToken)
+            input(type='text' name='username' placeholder='username' value=username)
+            input(type='password' name='password' placeholder='password' value=password)
+            button(type='submit') submit
