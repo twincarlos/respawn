@@ -15,12 +15,12 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         unique: true
       },
       description: {
         allowNull: false,
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT(500)
       },
       overallRating: {
         allowNull: false,

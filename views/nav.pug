@@ -10,17 +10,16 @@ html
                     button(type='submit') submit
             div#mid-nav
                 if user
-                    p= `welcome ${user}!`
-                if !user
+                    p= `welcome ${user.username}!`
+                else
                     p respawn
             div#right-nav
                 if user
-                    p add a game
-                    p logout
-                if !user
+                    a(href='/games/add') add a game
+                    a(href='/users/logout') logout
+                else
                     a(href='/users/login') login
                     a(href='/users/signup') signup
                     a(href='/users/demo') demo
-                    a(href='/users/logout') logout
     body
         block content

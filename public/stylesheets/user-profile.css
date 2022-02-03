@@ -1,0 +1,106 @@
+#profile-pic {
+    margin: 200px 300px;
+    width: 30%;
+}
+
+#profile-details {
+    position: absolute;
+    border: 1px solid pink;
+    width: 600px;
+    height: 300px;
+    bottom: 850px;
+    left: 1000px;
+
+    text-align: center;
+}
+
+#profile-gameshelves {
+    position: absolute;
+    border: 1px solid pink;
+    width: 600px;
+    height: 300px;
+    bottom: 500px;
+    left: 1000px;
+
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-right: 50px;
+}
+
+#games-container {
+    margin: auto;
+    width: 50%;
+    margin-top: 150px;
+}
+
+.single-game-div {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    height: 330px;
+}
+
+.game-img {
+    width: 50%;
+    margin: 20px 20px;
+    border-radius: 20px;
+}
+
+.game-name {
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 20px;
+}
+
+.play-status-select {
+    position: relative;
+    bottom: 290px;
+    left: 600px;
+}
+
+.have-played-question {
+    position: relative;
+    bottom: 280px;
+    left: 600px;
+}
+
+.add-to-gameshelf {
+    position: relative;
+    bottom: 280px;
+    left: 600px;
+}
+
+.gameshelf-div {
+    background-color: powderblue;
+    height: 20px;
+    width: 220px;
+    margin-bottom: -25px;
+    border-radius: 10px;
+}
+
+.gameshelf-checkbox {
+    position: relative;
+    bottom: 45px;
+    left: 195px;
+}
+
+h5 {
+    margin-left: 10px;
+}
+
+#gamesheves-container {
+    position: relative;
+    bottom: 20px;
+}
+
+.more-details {
+    position: relative;
+    bottom: 260px;
+    left: 600px;
+}

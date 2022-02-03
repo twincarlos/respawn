@@ -1,0 +1,16 @@
+extends nav.pug
+
+block content
+    div
+        h1 Signup
+        if errors
+            div
+                for error in errors
+                    p= error
+        form(action='/users/signup' method='post')
+            input(type='hidden' name='_csrf', value=csrfToken)
+            input(type='text' name='username' placeholder='username' value=username)
+            input(type='password' name='password' placeholder='password' value=password)
+            input(type='password' name='confirmPassword' placeholder='confirm password' value=confirmPassword)
+            input(type='text' name='profile' placeholder='profile pic' value=profile)
+            button(type='submit') submit

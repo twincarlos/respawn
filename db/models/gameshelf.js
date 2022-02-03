@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Gameshelf = sequelize.define('Gameshelf', {
-    name: { allowNull: false, type: DataTypes.STRING },
+    name: { allowNull: false, type: DataTypes.STRING(50) },
     userId: { allowNull: false, type: DataTypes.INTEGER,  references: { model: 'Users' } }
   }, {});
   Gameshelf.associate = function(models) {

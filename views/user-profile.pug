@@ -1,0 +1,45 @@
+extends nav.pug
+
+block content
+    link(rel='stylesheet' href='/stylesheets/user-profile.css')
+    img#profile-pic(src=profile.profile)
+
+    div#profile-details
+        h1= profile.username
+        p= profile.bio || 'nothing to say...'
+
+    div#profile-gameshelves
+        if user
+            if profile.id === user.id
+                h1 My Gameshelves
+            else
+                h1 Their Gameshelves
+        else
+            h1 Their Gameshelves
+        ul
+            for gameshelf in gameshelves
+                li= gameshelf.name
+
+    if games.length
+        div#games-container
+            for game in games
+                div.single-game-div
+                    h2.game-name= game.name
+                    img.game-img(src=game.image)
+                    h3.have-played-question Have played this game?
+                    select.play-status-select(name='play-status')
+                        option(value='') -- select --
+                        option(value='Played') Played
+                        option(value='Want To Play') Want To Play
+                        option(value='Playing') Playing
+                    h3.add-to-gameshelf Add to your gameshelf!
+                        div#gamesheves-container
+                            for gameshelf in gameshelves
+                                div.gameshelf-div
+                                    h5= gameshelf.name
+                                    input.gameshelf-checkbox(type='checkbox')
+                    a.more-details(href=`/games/${game.id}`) more details...
+
+
+    else
+        h1 No games developed yet...
